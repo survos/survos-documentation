@@ -1,6 +1,5 @@
 .. This file was automatically generated from SCRIPT_NAME -- do not modify it except to change the relevant twig file!
 
-<<<<<<< HEAD
 ..  _WebInterview_integration_type:
 
 WebInterview Integration Types
@@ -9,27 +8,6 @@ WebInterview
 
 The purpose of this integration is to provide a channel to collect data.
 
-=======
-..  _WebInterview_type:
-
-WebInterview Surveys
-=======================================
-WebInterview
-
-Basic Workflow
--------------------------
-* Configure a WebInterview Survey
-* Design Survey Questions
-* Preview with Dummy Data
-* Activate
-* Recruit
-* Collect
-
-Typical Deployment Configuration
---------------------------------
-
-* 3x/day for 14 days, randomly between participant wake time...
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
 
 WebInterview Wave Configuration
 ------------------------
@@ -42,7 +20,7 @@ WebInterview Basic
 This is the form snippet from `basic Tab in the WebInterview Wave
 <http://behattest.stagingsurvos.com/waves/dummy/WebInterview#basic>`_.
 
-.. figure::  /images/modules/ongoing_WebInterview_basic.png
+.. figure::  /images/modules/field_WebInterview_basic.png
 
    Rendered Form WebInterview Wave Tab basic
 
@@ -65,7 +43,26 @@ This is the form snippet from `basic Tab in the WebInterview Wave
         <tbody valign="top">
                                     <tr class="row-odd">
                 <th class="head">
+                    Protocol                </th>
+                <td>
+                                            <b>Type</b>: mixed
+                                    </td>
+                <td>
+                                    </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
                     Name                </th>
+                <td>
+                                            <b>Type</b>: string(80)                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    short name                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    Code                </th>
                 <td>
                                             <b>Type</b>: string(80)                            <br>
                         <b>Required</b>: No<br>
@@ -74,16 +71,6 @@ This is the form snippet from `basic Tab in the WebInterview Wave
                                     </td>
             </tr>
                                     <tr class="row-even">
-                <th class="head">
-                    Code                </th>
-                <td>
-                                            <b>Type</b>: string(80)                            <br>
-                        <b>Required</b>: Yes<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-odd">
                 <th class="head">
                     description                </th>
                 <td>
@@ -93,9 +80,19 @@ This is the form snippet from `basic Tab in the WebInterview Wave
                 <td>
                                     </td>
             </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    integrationTypeCode                </th>
+                <td>
+                                            <b>Type</b>: string(16)                            <br>
+                        <b>Required</b>: Yes<br>
+                                                                                    </td>
+                <td>
+                                    </td>
+            </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    Survey Channel                </th>
+                    Integration                </th>
                 <td>
                                             <b>Type</b>: mixed
                                     </td>
@@ -104,6 +101,15 @@ This is the form snippet from `basic Tab in the WebInterview Wave
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
+                    Survey Channel                </th>
+                <td>
+                                            <b>Type</b>: mixed
+                                    </td>
+                <td>
+                    How will the survey happen?                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
                     Dedicated Channel                </th>
                 <td>
                                             <b>Type</b>: mixed
@@ -111,7 +117,7 @@ This is the form snippet from `basic Tab in the WebInterview Wave
                 <td>
                     Deactivate previous waves using this channel                </td>
             </tr>
-                                    <tr class="row-even">
+                                    <tr class="row-odd">
                 <th class="head">
                     scheduleType                </th>
                 <td>
@@ -120,7 +126,7 @@ This is the form snippet from `basic Tab in the WebInterview Wave
                 <td>
                                     </td>
             </tr>
-                                    <tr class="row-odd">
+                                    <tr class="row-even">
                 <th class="head">
                     Prompt Channel                </th>
                 <td>
@@ -129,24 +135,24 @@ This is the form snippet from `basic Tab in the WebInterview Wave
                 <td>
                     How will the prompting happen?  Leave empty if same as survey                </td>
             </tr>
-                                    <tr class="row-even">
+                                    <tr class="row-odd">
                 <th class="head">
-<<<<<<< HEAD
-                    marking                </th>
-                <td>
-                                            <b>Type</b>: string(32)                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-=======
-                    Source Channel                </th>
+                    Response Channel                </th>
                 <td>
                                             <b>Type</b>: mixed
                                     </td>
                 <td>
-                    For Import or Interview                </td>
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
+                    Channel for response, if different than primary channel (e.g. API)                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    marking                </th>
+                <td>
+                                            <b>Type</b>: string(32)                            <br>
+                        <b>Required</b>: Yes<br>
+                                                                                    </td>
+                <td>
+                                    </td>
             </tr>
                     </tbody>
     </table>
@@ -159,7 +165,7 @@ WebInterview Schedule
 This is the form snippet from `schedule Tab in the WebInterview Wave
 <http://behattest.stagingsurvos.com/waves/dummy/WebInterview#schedule>`_.
 
-.. figure::  /images/modules/ongoing_WebInterview_schedule.png
+.. figure::  /images/modules/field_WebInterview_schedule.png
 
    Rendered Form WebInterview Wave Tab schedule
 
@@ -182,17 +188,24 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
         <tbody valign="top">
                                     <tr class="row-odd">
                 <th class="head">
-                    duration                </th>
+                    taskFrequencyType                </th>
                 <td>
-                                            <b>Type</b>: integer                            <br>
-                        <b>Required</b>: Yes<br>
-                                                                                    </td>
+                                            <b>Type</b>: mixed
+                                    </td>
                 <td>
-                    Number of days a participant is enrolled                </td>
+                                    </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-<<<<<<< HEAD
+                    duration                </th>
+                <td>
+                                            <b>Type</b>: mixed
+                                    </td>
+                <td>
+                    Number of days a participant is enrolled (set in Protocol)                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
                     OK to Enroll                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
@@ -201,10 +214,8 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
                 <td>
                     If enrollment is permitted now                </td>
             </tr>
-                                    <tr class="row-odd">
+                                    <tr class="row-even">
                 <th class="head">
-=======
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
                     Schedule                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
@@ -213,11 +224,7 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
                 <td>
                     help_block_schedule_configuration                </td>
             </tr>
-<<<<<<< HEAD
-                                    <tr class="row-even">
-=======
                                     <tr class="row-odd">
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
                 <th class="head">
                     Scheduling Conditions                </th>
                 <td>
@@ -228,11 +235,7 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
                     Only schedule when these conditions are met, e.g. dayOfWeek in ['Mon','Wed','Fri'] and dayOfMonth != 22
                                 Fields: dayOfWeek (.e.g Mon), month (e.g. Jan), dayOfMonth (e.g. 15)                </td>
             </tr>
-<<<<<<< HEAD
-                                    <tr class="row-odd">
-=======
                                     <tr class="row-even">
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
                 <th class="head">
                     Start Date                </th>
                 <td>
@@ -241,20 +244,7 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
                 <td>
                     Starting date of the protocol, when surveys are scheduled / accepted.                </td>
             </tr>
-<<<<<<< HEAD
-=======
                                     <tr class="row-odd">
-                <th class="head">
-                    Completion Threshold                </th>
-                <td>
-                                            <b>Type</b>: text                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                    Minimum completed prompt percentage to mark as Complete                </td>
-            </tr>
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
-                                    <tr class="row-even">
                 <th class="head">
                     Relative To Start Date                </th>
                 <td>
@@ -264,7 +254,7 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
                 <td>
                     +1 for starting the next day                </td>
             </tr>
-                                    <tr class="row-odd">
+                                    <tr class="row-even">
                 <th class="head">
                     Specific Start Date                </th>
                 <td>
@@ -274,9 +264,8 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
                 <td>
                     Only if type is set to specific, otherwise calculated                </td>
             </tr>
-                                    <tr class="row-even">
+                                    <tr class="row-odd">
                 <th class="head">
-<<<<<<< HEAD
                     Completion Threshold                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
@@ -285,10 +274,8 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
                 <td>
                     Minimum completed prompt percentage to mark as Complete                </td>
             </tr>
-                                    <tr class="row-odd">
+                                    <tr class="row-even">
                 <th class="head">
-=======
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
                     Notes                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
@@ -297,19 +284,35 @@ This is the form snippet from `schedule Tab in the WebInterview Wave
                 <td>
                                     </td>
             </tr>
-<<<<<<< HEAD
-                                    <tr class="row-even">
-=======
                                     <tr class="row-odd">
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
                 <th class="head">
-                    Is Active                </th>
+                    Allow in Observe                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Uncheck to disable and archive                </td>
+                    Send link to web-based survey                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    Publish Conditions                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    In addition to the Source Channel Filter                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    Field Workers                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    Separated By commas, empty means everyone is eligible                </td>
             </tr>
                     </tbody>
     </table>
@@ -322,7 +325,7 @@ WebInterview Enrollment
 This is the form snippet from `enrollment Tab in the WebInterview Wave
 <http://behattest.stagingsurvos.com/waves/dummy/WebInterview#enrollment>`_.
 
-.. figure::  /images/modules/ongoing_WebInterview_enrollment.png
+.. figure::  /images/modules/field_WebInterview_enrollment.png
 
    Rendered Form WebInterview Wave Tab enrollment
 
@@ -345,50 +348,13 @@ This is the form snippet from `enrollment Tab in the WebInterview Wave
         <tbody valign="top">
                                     <tr class="row-odd">
                 <th class="head">
-                    Auto-Schedule                </th>
-                <td>
-                                            <b>Type</b>: mixed
-                                    </td>
-                <td>
-                    When a member registers via text or the web, schedule their assignments immediately                </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    Auto-Enroll                </th>
-                <td>
-                                            <b>Type</b>: mixed
-                                    </td>
-                <td>
-                    When a member registers via text or the web, automatically enroll them in this wave                </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-                    Tracked                </th>
+                    Auto Publish                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Capture Location with Web Survey                </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    Protocol                </th>
-                <td>
-                                            <b>Type</b>: mixed
-                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-                    Auto Populate Data                </th>
-                <td>
-                                            <b>Type</b>: boolean                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                    Automatically update  data   with results                </td>
+                    Auto-publish tasks to Audit/Import when queued                </td>
             </tr>
                     </tbody>
     </table>
@@ -401,7 +367,7 @@ WebInterview Expiration
 This is the form snippet from `expiration Tab in the WebInterview Wave
 <http://behattest.stagingsurvos.com/waves/dummy/WebInterview#expiration>`_.
 
-.. figure::  /images/modules/ongoing_WebInterview_expiration.png
+.. figure::  /images/modules/field_WebInterview_expiration.png
 
    Rendered Form WebInterview Wave Tab expiration
 
@@ -424,7 +390,7 @@ This is the form snippet from `expiration Tab in the WebInterview Wave
         <tbody valign="top">
                                     <tr class="row-odd">
                 <th class="head">
-                    Minutes before expiration                </th>
+                    Time before expiration                </th>
                 <td>
                                             <b>Type</b>: integer                            <br>
                         <b>Required</b>: No<br>
@@ -450,7 +416,7 @@ This is the form snippet from `expiration Tab in the WebInterview Wave
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Time since first response (in minutes) before marking as Abandoned                </td>
+                    Time allowed after first response before marking as abandoned (eg, 5m, 3h, 2d)                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
@@ -460,7 +426,7 @@ This is the form snippet from `expiration Tab in the WebInterview Wave
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Once responding, number of warnings before marking as Abandoned                </td>
+                    Once responding, number of warnings before marking as abandoned                </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
@@ -470,37 +436,8 @@ This is the form snippet from `expiration Tab in the WebInterview Wave
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Delay surveys if necessary by this amount (in minutes)                </td>
+                    Delay surveys if necessary by this amount  (eg, 5m, 3h, 2d)                </td>
             </tr>
-                                    <tr class="row-even">
-                <th class="head">
-<<<<<<< HEAD
-                    Reminder Message                </th>
-=======
-                    End Message                </th>
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
-                <td>
-                                            <b>Type</b>: text                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-<<<<<<< HEAD
-                    Warning Message                </th>
-=======
-                    Reminder Message                </th>
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
-                <td>
-                                            <b>Type</b>: text                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-<<<<<<< HEAD
                     </tbody>
     </table>
     </div>
@@ -512,7 +449,7 @@ WebInterview Messages
 This is the form snippet from `messages Tab in the WebInterview Wave
 <http://behattest.stagingsurvos.com/waves/dummy/WebInterview#messages>`_.
 
-.. figure::  /images/modules/ongoing_WebInterview_messages.png
+.. figure::  /images/modules/field_WebInterview_messages.png
 
    Rendered Form WebInterview Wave Tab messages
 
@@ -535,115 +472,156 @@ This is the form snippet from `messages Tab in the WebInterview Wave
         <tbody valign="top">
                                     <tr class="row-odd">
                 <th class="head">
-                    welcomeMessage                </th>
+                    welcome                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Message text                </td>
+                    Welcome!                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    welcomeMessage                </th>
+                    welcome                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    welcomeMessage Message                </td>
+                    welcome Custom Message                </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
-                    taskEndMessage                </th>
+                    taskEnd                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Message text                </td>
+                    The task has ended.                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    taskEndMessage                </th>
+                    taskEnd                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    taskEndMessage Message                </td>
+                    taskEnd Custom Message                </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
-                    endMessage                </th>
+                    prompt                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Message text                </td>
+                    Time to take your survey!                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    endMessage                </th>
-=======
-                                    <tr class="row-even">
-                <th class="head">
-                    Expiration Message                </th>
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
+                    prompt                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-<<<<<<< HEAD
-                    endMessage Message                </td>
+                    prompt Custom Message                </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
-                    expirationMessage                </th>
+                    end                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Message text                </td>
+                    The assignment has ended.                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    expirationMessage                </th>
-=======
+                    end                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    end Custom Message                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    expiration                </th>
+                <td>
+                                            <b>Type</b>: boolean                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    The assignment has expired                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    expiration                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    expiration Custom Message                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    reminder                </th>
+                <td>
+                                            <b>Type</b>: mixed
                                     </td>
+                <td>
+                    Please start your survey.                </td>
             </tr>
-                                    <tr class="row-odd">
+                                    <tr class="row-even">
                 <th class="head">
-                    Warning Message                </th>
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
+                    reminder                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-<<<<<<< HEAD
-                    expirationMessage Message                </td>
-=======
+                    reminder Custom Message                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    warning                </th>
+                <td>
+                                            <b>Type</b>: mixed
                                     </td>
->>>>>>> 33e064430e0b8f0afb7d2cef31f36fdd30446c0d
+                <td>
+                    You have {{ assignment.remainingTimeDisplay}} remaining.                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    warning                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    warning Custom Message                </td>
             </tr>
                     </tbody>
     </table>
     </div>
 
 
-WebInterview Extra
+WebInterview Routing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This is the form snippet from `additional Tab in the WebInterview Wave
-<http://behattest.stagingsurvos.com/waves/dummy/WebInterview#additional>`_.
+This is the form snippet from `routing Tab in the WebInterview Wave
+<http://behattest.stagingsurvos.com/waves/dummy/WebInterview#routing>`_.
 
-.. figure::  /images/modules/ongoing_WebInterview_additional.png
+.. figure::  /images/modules/field_WebInterview_routing.png
 
-   Rendered Form WebInterview Wave Tab additional
+   Rendered Form WebInterview Wave Tab routing
 
 .. raw:: html
 
@@ -662,6 +640,66 @@ This is the form snippet from `additional Tab in the WebInterview Wave
             </tr>
         </thead>
         <tbody valign="top">
+                                    <tr class="row-odd">
+                <th class="head">
+                    MobilityPreference                </th>
+                <td>
+                                            <b>Type</b>: string(12)                            <br>
+                        <b>Required</b>: Yes<br>
+                                                                                    </td>
+                <td>
+                                    </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    Cents/mile                </th>
+                <td>
+                                            <b>Type</b>: integer                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                                    </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    Minutes/Task                </th>
+                <td>
+                                            <b>Type</b>: integer                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                                    </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    RouteDistance                </th>
+                <td>
+                                            <b>Type</b>: integer                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                                    </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    RouteTime                </th>
+                <td>
+                                            <b>Type</b>: integer                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                                    </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    include_route_points                </th>
+                <td>
+                                            <b>Type</b>: boolean                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                                    </td>
+            </tr>
                     </tbody>
     </table>
     </div>

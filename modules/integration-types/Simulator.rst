@@ -20,7 +20,7 @@ Simulator Basic
 This is the form snippet from `basic Tab in the Simulator Wave
 <http://behattest.stagingsurvos.com/waves/dummy/Simulator#basic>`_.
 
-.. figure::  /images/modules/ongoing_Simulator_basic.png
+.. figure::  /images/modules/stay_Simulator_basic.png
 
    Rendered Form Simulator Wave Tab basic
 
@@ -43,7 +43,26 @@ This is the form snippet from `basic Tab in the Simulator Wave
         <tbody valign="top">
                                     <tr class="row-odd">
                 <th class="head">
+                    Protocol                </th>
+                <td>
+                                            <b>Type</b>: mixed
+                                    </td>
+                <td>
+                                    </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
                     Name                </th>
+                <td>
+                                            <b>Type</b>: string(80)                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    short name                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    Code                </th>
                 <td>
                                             <b>Type</b>: string(80)                            <br>
                         <b>Required</b>: No<br>
@@ -52,16 +71,6 @@ This is the form snippet from `basic Tab in the Simulator Wave
                                     </td>
             </tr>
                                     <tr class="row-even">
-                <th class="head">
-                    Code                </th>
-                <td>
-                                            <b>Type</b>: string(80)                            <br>
-                        <b>Required</b>: Yes<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-odd">
                 <th class="head">
                     description                </th>
                 <td>
@@ -71,9 +80,19 @@ This is the form snippet from `basic Tab in the Simulator Wave
                 <td>
                                     </td>
             </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    integrationTypeCode                </th>
+                <td>
+                                            <b>Type</b>: string(16)                            <br>
+                        <b>Required</b>: Yes<br>
+                                                                                    </td>
+                <td>
+                                    </td>
+            </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    Survey Channel                </th>
+                    Integration                </th>
                 <td>
                                             <b>Type</b>: mixed
                                     </td>
@@ -82,6 +101,15 @@ This is the form snippet from `basic Tab in the Simulator Wave
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
+                    Survey Channel                </th>
+                <td>
+                                            <b>Type</b>: mixed
+                                    </td>
+                <td>
+                    How will the survey happen?                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
                     Dedicated Channel                </th>
                 <td>
                                             <b>Type</b>: mixed
@@ -89,7 +117,7 @@ This is the form snippet from `basic Tab in the Simulator Wave
                 <td>
                     Deactivate previous waves using this channel                </td>
             </tr>
-                                    <tr class="row-even">
+                                    <tr class="row-odd">
                 <th class="head">
                     scheduleType                </th>
                 <td>
@@ -98,7 +126,7 @@ This is the form snippet from `basic Tab in the Simulator Wave
                 <td>
                                     </td>
             </tr>
-                                    <tr class="row-odd">
+                                    <tr class="row-even">
                 <th class="head">
                     Prompt Channel                </th>
                 <td>
@@ -107,67 +135,24 @@ This is the form snippet from `basic Tab in the Simulator Wave
                 <td>
                     How will the prompting happen?  Leave empty if same as survey                </td>
             </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    Response Channel                </th>
+                <td>
+                                            <b>Type</b>: mixed
+                                    </td>
+                <td>
+                    Channel for response, if different than primary channel (e.g. API)                </td>
+            </tr>
                                     <tr class="row-even">
                 <th class="head">
                     marking                </th>
                 <td>
                                             <b>Type</b>: string(32)                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                    </tbody>
-    </table>
-    </div>
-
-
-Simulator Schedule
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This is the form snippet from `schedule Tab in the Simulator Wave
-<http://behattest.stagingsurvos.com/waves/dummy/Simulator#schedule>`_.
-
-.. figure::  /images/modules/ongoing_Simulator_schedule.png
-
-   Rendered Form Simulator Wave Tab schedule
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-        <colgroup>
-        <col width="15%">
-        <col width="25%">
-        <col width="60%">
-        </colgroup>
-        <thead valign="bottom">
-            <tr class="row-odd">
-                <th class="head">Field</th>
-                <th class="head">Info</th>
-                <th class="head">Description</th>
-            </tr>
-        </thead>
-        <tbody valign="top">
-                                    <tr class="row-odd">
-                <th class="head">
-                    duration                </th>
-                <td>
-                                            <b>Type</b>: integer                            <br>
                         <b>Required</b>: Yes<br>
                                                                                     </td>
                 <td>
-                    Number of days a participant is enrolled                </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    OK to Enroll                </th>
-                <td>
-                                            <b>Type</b>: boolean                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                    If enrollment is permitted now                </td>
+                                    </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
@@ -241,13 +226,23 @@ This is the form snippet from `schedule Tab in the Simulator Wave
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    Is Active                </th>
+                    Allow in Observe                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Uncheck to disable and archive                </td>
+                    Send link to web-based survey                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    Publish Conditions                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    In addition to the Source Channel Filter                </td>
             </tr>
                     </tbody>
     </table>
@@ -260,7 +255,7 @@ Simulator Enrollment
 This is the form snippet from `enrollment Tab in the Simulator Wave
 <http://behattest.stagingsurvos.com/waves/dummy/Simulator#enrollment>`_.
 
-.. figure::  /images/modules/ongoing_Simulator_enrollment.png
+.. figure::  /images/modules/stay_Simulator_enrollment.png
 
    Rendered Form Simulator Wave Tab enrollment
 
@@ -281,53 +276,6 @@ This is the form snippet from `enrollment Tab in the Simulator Wave
             </tr>
         </thead>
         <tbody valign="top">
-                                    <tr class="row-odd">
-                <th class="head">
-                    Auto-Schedule                </th>
-                <td>
-                                            <b>Type</b>: mixed
-                                    </td>
-                <td>
-                    When a member registers via text or the web, schedule their assignments immediately                </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    Auto-Enroll                </th>
-                <td>
-                                            <b>Type</b>: mixed
-                                    </td>
-                <td>
-                    When a member registers via text or the web, automatically enroll them in this wave                </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-                    Tracked                </th>
-                <td>
-                                            <b>Type</b>: boolean                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                    Capture Location with Web Survey                </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    Protocol                </th>
-                <td>
-                                            <b>Type</b>: mixed
-                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-                    Auto Populate Data                </th>
-                <td>
-                                            <b>Type</b>: boolean                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                    Automatically update  data   with results                </td>
-            </tr>
                     </tbody>
     </table>
     </div>
@@ -339,7 +287,7 @@ Simulator Expiration
 This is the form snippet from `expiration Tab in the Simulator Wave
 <http://behattest.stagingsurvos.com/waves/dummy/Simulator#expiration>`_.
 
-.. figure::  /images/modules/ongoing_Simulator_expiration.png
+.. figure::  /images/modules/stay_Simulator_expiration.png
 
    Rendered Form Simulator Wave Tab expiration
 
@@ -362,7 +310,7 @@ This is the form snippet from `expiration Tab in the Simulator Wave
         <tbody valign="top">
                                     <tr class="row-odd">
                 <th class="head">
-                    Minutes before expiration                </th>
+                    Time before expiration                </th>
                 <td>
                                             <b>Type</b>: integer                            <br>
                         <b>Required</b>: No<br>
@@ -388,7 +336,7 @@ This is the form snippet from `expiration Tab in the Simulator Wave
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Time since first response (in minutes) before marking as Abandoned                </td>
+                    Time allowed after first response before marking as abandoned (eg, 5m, 3h, 2d)                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
@@ -398,7 +346,7 @@ This is the form snippet from `expiration Tab in the Simulator Wave
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Once responding, number of warnings before marking as Abandoned                </td>
+                    Once responding, number of warnings before marking as abandoned                </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
@@ -408,27 +356,7 @@ This is the form snippet from `expiration Tab in the Simulator Wave
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Delay surveys if necessary by this amount (in minutes)                </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    Reminder Message                </th>
-                <td>
-                                            <b>Type</b>: text                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-                    Warning Message                </th>
-                <td>
-                                            <b>Type</b>: text                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
+                    Delay surveys if necessary by this amount  (eg, 5m, 3h, 2d)                </td>
             </tr>
                     </tbody>
     </table>
@@ -441,7 +369,7 @@ Simulator Messages
 This is the form snippet from `messages Tab in the Simulator Wave
 <http://behattest.stagingsurvos.com/waves/dummy/Simulator#messages>`_.
 
-.. figure::  /images/modules/ongoing_Simulator_messages.png
+.. figure::  /images/modules/stay_Simulator_messages.png
 
    Rendered Form Simulator Wave Tab messages
 
@@ -464,116 +392,142 @@ This is the form snippet from `messages Tab in the Simulator Wave
         <tbody valign="top">
                                     <tr class="row-odd">
                 <th class="head">
-                    welcomeMessage                </th>
+                    welcome                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Message text                </td>
+                    Welcome!                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    welcomeMessage                </th>
+                    welcome                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    welcomeMessage Message                </td>
+                    welcome Custom Message                </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
-                    taskEndMessage                </th>
+                    taskEnd                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Message text                </td>
+                    The task has ended.                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    taskEndMessage                </th>
+                    taskEnd                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    taskEndMessage Message                </td>
+                    taskEnd Custom Message                </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
-                    endMessage                </th>
+                    prompt                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Message text                </td>
+                    Time to take your survey!                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    endMessage                </th>
+                    prompt                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    endMessage Message                </td>
+                    prompt Custom Message                </td>
             </tr>
                                     <tr class="row-odd">
                 <th class="head">
-                    expirationMessage                </th>
+                    end                </th>
                 <td>
                                             <b>Type</b>: boolean                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    Message text                </td>
+                    The assignment has ended.                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    expirationMessage                </th>
+                    end                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
                         <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
-                    expirationMessage Message                </td>
+                    end Custom Message                </td>
             </tr>
-                    </tbody>
-    </table>
-    </div>
-
-
-Simulator Extra
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This is the form snippet from `additional Tab in the Simulator Wave
-<http://behattest.stagingsurvos.com/waves/dummy/Simulator#additional>`_.
-
-.. figure::  /images/modules/ongoing_Simulator_additional.png
-
-   Rendered Form Simulator Wave Tab additional
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-        <colgroup>
-        <col width="15%">
-        <col width="25%">
-        <col width="60%">
-        </colgroup>
-        <thead valign="bottom">
-            <tr class="row-odd">
-                <th class="head">Field</th>
-                <th class="head">Info</th>
-                <th class="head">Description</th>
+                                    <tr class="row-odd">
+                <th class="head">
+                    expiration                </th>
+                <td>
+                                            <b>Type</b>: boolean                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    The assignment has expired                </td>
             </tr>
-        </thead>
-        <tbody valign="top">
+                                    <tr class="row-even">
+                <th class="head">
+                    expiration                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    expiration Custom Message                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    reminder                </th>
+                <td>
+                                            <b>Type</b>: mixed
+                                    </td>
+                <td>
+                    Please start your survey.                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    reminder                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    reminder Custom Message                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    warning                </th>
+                <td>
+                                            <b>Type</b>: mixed
+                                    </td>
+                <td>
+                    You have {{ assignment.remainingTimeDisplay}} remaining.                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    warning                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    warning Custom Message                </td>
+            </tr>
                     </tbody>
     </table>
     </div>

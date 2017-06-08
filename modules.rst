@@ -9,3 +9,5 @@ Contents:
 
     modules/screener
     modules/ongoing
+    modules/stay
+    modules/field
