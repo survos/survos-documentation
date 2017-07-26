@@ -7,7 +7,7 @@ Survey States
 * new
 * configured
 * draft
-* preview
+* survey_preview
 * waves_active
 * data_collected
 * no_data_collected
@@ -21,7 +21,7 @@ Survey Transitions
 #. design_questions
 #. modify_configuration
 #. publish
-#. deploy
+#. deploy_waves
 #. data_collected
 #. unlock
 #. edit

@@ -4,15 +4,22 @@ Workflow project in Project
 Project States
 -------------------------------------
 
-* new
-* configured
-* deployed
-* archived
+* configuration
+* pending_approval
+* collecting_data
+* aborted
+* complete
+* cancelled
 
 Project Transitions
 ----------------------------------------
-#. configure
-#. archive
+#. propose
+#. reject
+#. cancel
+#. launch
+#. stop_at_deadline
+#. abort
+#. all_data_collected
 
 The Workflow
 ------------

@@ -9,29 +9,28 @@ Getting Started
 ---------------
 
 The platform has 4 related but independent *modules*.  Each module collects a different type of data.  All modules
-consist of
-protocols, surveys, waves, tasks, assignments, sets and channels.  These terms will be defined within each module, with examples.
+consist of protocols, surveys, waves, tasks, assignments, sets and channels.  These terms will be defined within each module, with examples.
 Knowing these terms and how they are connected to each module is key to understanding the platform.
 
-These are the modules, named by the action each does, and is a verb.
+What can you do with the Survos Platform?   These four verbs answer that question, and are the names of the modules:
 
+- **Recruit** recruit and enroll study participants or field workers
 - **Study** collect personal data about a set of study participants
 - **Audit** get objective (not personal), data about a set of inanimate objects, like images or places
 - **Annotate** combination of Study and Audit, collects *personal data* about a set of *place*s or *event*s, basically a personal map or calendar annotation.
-- **Recruit** recruit and enroll study participants or field workers
 
-In general, the workflow to collect data for any module is as follows:
+In general, the workflow to collect data within any module is as follows:
 
 * Design one or more *survey*s -- the questions you want to ask
 * Establish a *set* of who or what those questions will be asked of
-* Establish a protocol associated with that set of data and a channel type for how that data will be collected.
+* Configure a *protocol* associated with that set of data and a channel type for how that data will be collected.
 * Add one or more surveys and timing information to the protocol, this is called a deployment wave, or simply *wave*.
 * Once the protocol has been configured with surveys and timing information, activate that protocol.
 
 Recruit
 -------
 
-Recruit and enroll study participants
+Recruit and enroll study participants.  The purpose of this module is to create new participant accounts within the system.
 
 Protocol
      The protocol configuration includes how the candidate will take the survey.  In most cases, this will be either self-enrolled via the participant website, or done as an interview by a researcher who will enter the data via the administrative website.

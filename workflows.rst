@@ -17,6 +17,5 @@ Contents:
     workflows/Member/member_participant
     workflows/Data/data
     workflows/Survey/survey
-    workflows/Wave/wave
     workflows/Protocol/protocol
     workflows/ExportFile/export_file

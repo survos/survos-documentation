@@ -1,12 +1,10 @@
-Workflow surveyResponse in Assignment
+Workflow survey_response in Assignment
 =========================================================
 
 Assignment States
 -------------------------------------
 
 * scheduled
-* queued
-* twilio_error
 * initiated
 * responding
 * abandoned
@@ -15,18 +13,18 @@ Assignment States
 
 Assignment Transitions
 ----------------------------------------
-#. msg_to_twilio
-#. twilio_error
-#. direct_message
-#. initial_prompt_received
+#. at_start_time
+#. single_submission
+#. reminders_sent
+#. warnings_sent
 #. never_responds
 #. first_response
 #. stops_responding
-#. all_responses
+#. no_more_questions
 
 The Workflow
 ------------
 
-.. figure::  /images/workflows/surveyResponse.png
+.. figure::  /images/workflows/survey_response.png
 
-   Workflow surveyResponse
+   Workflow survey_response
