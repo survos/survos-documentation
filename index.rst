@@ -5,8 +5,8 @@ The Survos Platform provides researchers with powerful tools to interact with th
 
 This documentation provides detailed instructions about what the tools do, and how they are configured.  As with many comprehensive systems, sometimes getting started is the hardest part.  The major parts of the data collection system are broken down into "Modules".  The basic workflow is the same for all the survey types.
 
-Getting Started
----------------
+Getting Started with Modules
+----------------------------
 
 The platform has 4 related but independent *modules*.  Each module collects a different type of data.  All modules
 consist of protocols, surveys, waves, tasks, assignments, sets and channels.  These terms will be defined within each module, with examples.
@@ -16,21 +16,22 @@ What can you do with the Survos Platform?   These four verbs answer that questio
 
 - **Recruit** recruit and enroll study participants or field workers
 - **Study** collect personal data about a set of study participants
-- **Audit** get objective (not personal), data about a set of inanimate objects, like images or places
-- **Annotate** combination of Study and Audit, collects *personal data* about a set of *place*s or *event*s, basically a personal map or calendar annotation.
+- **Audit** get objective (not personal) data about a set of inanimate objects, like images or places
+- **Annotate** combination of Study and Audit, collects *personal data* about a set of places or events, basically a personal map or calendar annotation.
 
 In general, the workflow to collect data within any module is as follows:
 
-* Design one or more *survey*s -- the questions you want to ask
-* Establish a *set* of who or what those questions will be asked of
-* Configure a *protocol* associated with that set of data and a channel type for how that data will be collected.
-* Add one or more surveys and timing information to the protocol, this is called a deployment wave, or simply *wave*.
-* Once the protocol has been configured with surveys and timing information, activate that protocol.
+#. Establish a *set* of who or what those questions will be asked of
+#. Configure a *protocol* associated with that set of data and a channel type for how that data will be collected.
+#. Design one or more *surveys* -- the questions you want to ask
+#. Add one or more surveys and timing information to the protocol, this is called a deployment wave, or simply *wave*.
+#. Once the protocol has been configured with surveys and timing information, activate that protocol.
 
 Recruit
 -------
 
-Recruit and enroll study participants.  The purpose of this module is to create new participant accounts within the system.
+.. IMPORTANT::
+   Recruit and enroll study participants.  The purpose of this module is to create new participant accounts within the system.
 
 Protocol
      The protocol configuration includes how the candidate will take the survey.  In most cases, this will be either self-enrolled via the participant website, or done as an interview by a researcher who will enter the data via the administrative website.
@@ -46,35 +47,20 @@ A typical recruit protocol might be to ask if someone smokes cigarettes, is abov
 Study
 -------
 
-Collect personal data about a set of study participants.  Study participants are created in the Recruit module, or by simply creating a participant account.
+.. TIP::
+   Collect personal data about a set of study participants.  Study participants are created in the Recruit module, or by simply creating a participant account.
 
+Participant Set
+     The collection of participants who will be enrolled in each wave of this protocol.  The default set is "All Accepted Participants", or you can create a subset like "All participants who self-identify as smokers" or "All participants who have completed with baseline protocols" or "All participants who have completed the observation period and have a compliance score of greater than 80%".
 
+Protocol
+     The protocol configuration includes the participant set, the schedule type (e.g. just one time, like a baseline survey, or periodic, like a daily diary, or even a testing schedule, called a "blitz").  If the schedule type is periodic, then the duration of the protocol is also defined.  The method of communication is also defined in the protocol, e.g. SMS or web-based. For example, you can configure the "Observation Protocol" as a 2-week period communicating with pregnant smokers via SMS.  Note that when you initially set up the protocol, there are no surveys or schedules yet -- those come when the wave is configured.
+Survey
+    A list of questions and answer options.  For protocols with schedule type of for one-time surveys (e.g. a baseline protocol), these questions are likely to be in the form of "Have you ever...?" or "Do you...?"  For periodic protocols, like an observation period, the questions are likely be EMA (Ecological Momentary Assessments, "in-the-moment" surveys), or coverage surveys, like a daily diary.  An EMA survey may have questions in the form "Right now, are you...?", e.g. "Right now, are you with other people?", "Right now, how much do you want to use marijuana?".  A coverage survey typically contains questions like "Thinking about today only, did you purchase any tobacco products?" or "In the last 4 hours, did you exercise?"  The common theme of surveys in the Study Module is that they are questions about the participant.
+Wave
+    The deployment of the survey questions within a protocol, along with relevant configuration information.  If it's part of a periodic protocol, then the specific schedule is defined here.  Also, the communication channel is defined and the prompt channel (email, SMS, etc.).  Compliance thresholds are set, expiration times, reminders, etc.  The wave is where the majority of the settings are configured, and are defined in detail in this documentation.
 
-
-
-
-If your projects has study participants, enable one or more of these modules:
-
- - *Ongoing*: Continous collection of data about a *participant*, .e.g an SMS survey 3x/day for 2 weeks, see :ref:`ongoing`
- - *Single*: A questionnaire of a participant, often web-based, e.g. "How often did your parents smoke indoors?" *disabled*
- - *Tracking*: Continuous location data (works with tracking app that runs on participant's phone) see *disabled*
-
-We integration with Amazon's Mechanical Turk, to do the following:
-
- - *Turk Opinion*: Questions are answered by anonymous Turkers see *disabled*
- - *Turk Expert*: Questions are answered by a single, anonymous Turker about an image, place or other piece of data
- - *Turk Consensus*: Questions about things (not people) are answered by multiple, anonymous Turkers until consensus is reached.
-
-If your project has a list of places that need to be visited by field workers, install
-
- - *Field*: Questions about a list of places visited by field workers.
-
-If your project needs to pre-qualify participants, field-workers, or turkers, install
-
- - *Screener*: Scored Surveys that pre-qualify participants or Turkers before they begin work.  Unpaid.
-
-Because the modules can be run independently and that often a study needs only one or two modules, this documentation describes each module as if it were a separate project.  While a real-world study may enable multiple modules, keeping them separate makes it easier to learn and understand the system.  In the appendix there are examples of more complex configurations.
-
+A typical study protocol might be for 3 week to send SMS prompts 4 times per day asking participants who have completed the baseline protocol if they have smoked in the last 4 hours, as well as random prompts 6 times per day to ask if they are smoking right now, and if not, what their craving to smoke is.
 
 Contents:
 
@@ -89,11 +75,6 @@ Contents:
     users-participants
     tutorials
     tracking
-
-
-
-
-
 
 Indexes and tables
 ==================
