@@ -29,7 +29,6 @@ Protocol
 Turk
     Amazon Mechanical Turk (AMT) is a marketplace for crowd-sourced work. The Posse Platform enables a user to create what AMT calls external HITs, which are tasks run outside of the AMT system. Internal hits for AMT are somewhat limited. With a Turk job, a task is posted and a crowd of anonymous users has a chance to accept individual assignments and complete the task. This is particularly good for gathering data about a photo, where if a group of anonymous people reach consensus about something, it is likely to be valid.
 
-
 - **Accounts (aka "member")**: Accounts associated with a project.  All users have an identifier that is unique with in the project, for study participants, this is sometimes referred to as a "Subject ID", and except when testing, this identifier should not be personally identifiable.  There are various roles users have, such as "applicant", "participant", "turker" "researcher" and "participant".
 - **Assignment/Survey Response**: The participant's survey answers.
 - **Data**: Each project may contain its own database of places, images and other data.  Jobs that use data (e.g. visiting a list of places, looking at a list of photos) get their data from these tables.  Wave collect data (e.g. taking pictures) put their results here (so the results can be used by subsequent Surveys).

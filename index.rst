@@ -8,6 +8,52 @@ This documentation provides detailed instructions about what the tools do, and h
 Getting Started
 ---------------
 
+The platform has 4 related but independent *modules*.  Each module collects a different type of data.  All modules
+consist of
+protocols, surveys, waves, tasks, assignments, sets and channels.  These terms will be defined within each module, with examples.
+Knowing these terms and how they are connected to each module is key to understanding the platform.
+
+These are the modules, named by the action each does, and is a verb.
+
+- **Study** collect personal data about a set of study participants
+- **Audit** get objective (not personal), data about a set of inanimate objects, like images or places
+- **Annotate** combination of Study and Audit, collects *personal data* about a set of *place*s or *event*s, basically a personal map or calendar annotation.
+- **Recruit** recruit and enroll study participants or field workers
+
+In general, the workflow to collect data for any module is as follows:
+
+* Design one or more *survey*s -- the questions you want to ask
+* Establish a *set* of who or what those questions will be asked of
+* Establish a protocol associated with that set of data and a channel type for how that data will be collected.
+* Add one or more surveys and timing information to the protocol, this is called a deployment wave, or simply *wave*.
+* Once the protocol has been configured with surveys and timing information, activate that protocol.
+
+Recruit
+-------
+
+Recruit and enroll study participants
+
+Protocol
+     The protocol configuration includes how the candidate will take the survey.  In most cases, this will be either self-enrolled via the participant website, or done as an interview by a researcher who will enter the data via the administrative website.
+Survey
+    A list of questions and answer options.  Answers can have scores associated with them, when a candidate fills out a survey, answers with scores are totaled and can be used in the wave configuration to automatically approve those candidates as participants.
+Wave
+    The deployment of the survey questions, along with the configuration data specific to automatic enrollment, like the minimum score required.
+
+Most of the example projects use a self-enrollment protocol, with very minimal requirements for actual enrollment.
+
+A typical recruit protocol might be to ask if someone smokes cigarettes, is above 18, and has not tried to quit in the last year.  Based on their answers, they may be accepted in the study.  At that point, they'd have an account tagged as active, and therefore would be added into the "accepted participants" set (used by Study protocols).
+
+Study
+-------
+
+Collect personal data about a set of study participants.  Study participants are created in the Recruit module, or by simply creating a participant account.
+
+
+
+
+
+
 If your projects has study participants, enable one or more of these modules:
 
  - *Ongoing*: Continous collection of data about a *participant*, .e.g an SMS survey 3x/day for 2 weeks, see :ref:`ongoing`

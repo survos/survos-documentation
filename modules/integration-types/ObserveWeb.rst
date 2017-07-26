@@ -52,26 +52,6 @@ This is the form snippet from `basic Tab in the ObserveWeb Wave
             </tr>
                                     <tr class="row-even">
                 <th class="head">
-                    Name                </th>
-                <td>
-                                            <b>Type</b>: string(80)                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                    short name                </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-                    Code                </th>
-                <td>
-                                            <b>Type</b>: string(80)                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
                     description                </th>
                 <td>
                                             <b>Type</b>: text                            <br>
@@ -85,21 +65,12 @@ This is the form snippet from `basic Tab in the ObserveWeb Wave
                     integrationTypeCode                </th>
                 <td>
                                             <b>Type</b>: string(16)                            <br>
-                        <b>Required</b>: Yes<br>
+                        <b>Required</b>: No<br>
                                                                                     </td>
                 <td>
                                     </td>
             </tr>
                                     <tr class="row-even">
-                <th class="head">
-                    Integration                </th>
-                <td>
-                                            <b>Type</b>: mixed
-                                    </td>
-                <td>
-                    How will the survey happen?                </td>
-            </tr>
-                                    <tr class="row-odd">
                 <th class="head">
                     Survey Channel                </th>
                 <td>
@@ -108,7 +79,7 @@ This is the form snippet from `basic Tab in the ObserveWeb Wave
                 <td>
                     How will the survey happen?                </td>
             </tr>
-                                    <tr class="row-even">
+                                    <tr class="row-odd">
                 <th class="head">
                     Dedicated Channel                </th>
                 <td>
@@ -117,7 +88,7 @@ This is the form snippet from `basic Tab in the ObserveWeb Wave
                 <td>
                     Deactivate previous waves using this channel                </td>
             </tr>
-                                    <tr class="row-odd">
+                                    <tr class="row-even">
                 <th class="head">
                     scheduleType                </th>
                 <td>
@@ -125,6 +96,16 @@ This is the form snippet from `basic Tab in the ObserveWeb Wave
                                     </td>
                 <td>
                                     </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    Trigger                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    Key word to trigger self-initiated survey                </td>
             </tr>
                                     <tr class="row-even">
                 <th class="head">
@@ -148,12 +129,43 @@ This is the form snippet from `basic Tab in the ObserveWeb Wave
                 <th class="head">
                     marking                </th>
                 <td>
-                                            <b>Type</b>: string(32)                            <br>
-                        <b>Required</b>: Yes<br>
-                                                                                    </td>
+                                            <b>Type</b>: mixed
+                                    </td>
                 <td>
                                     </td>
             </tr>
+                    </tbody>
+    </table>
+    </div>
+
+
+ObserveWeb Questions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is the form snippet from `questions Tab in the ObserveWeb Wave
+<http://behattest.stagingsurvos.com/waves/dummy/ObserveWeb#questions>`_.
+
+.. figure::  /images/modules/field_ObserveWeb_questions.png
+
+   Rendered Form ObserveWeb Wave Tab questions
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+        <colgroup>
+        <col width="15%">
+        <col width="25%">
+        <col width="60%">
+        </colgroup>
+        <thead valign="bottom">
+            <tr class="row-odd">
+                <th class="head">Field</th>
+                <th class="head">Info</th>
+                <th class="head">Description</th>
+            </tr>
+        </thead>
+        <tbody valign="top">
                     </tbody>
     </table>
     </div>
@@ -258,9 +270,8 @@ This is the form snippet from `schedule Tab in the ObserveWeb Wave
                 <th class="head">
                     Specific Start Date                </th>
                 <td>
-                                            <b>Type</b>: datetime                            <br>
-                        <b>Required</b>: Yes<br>
-                                                                                    </td>
+                                            <b>Type</b>: mixed
+                                    </td>
                 <td>
                     Only if type is set to specific, otherwise calculated                </td>
             </tr>
@@ -355,6 +366,68 @@ This is the form snippet from `enrollment Tab in the ObserveWeb Wave
                                                                                     </td>
                 <td>
                     Auto-publish tasks to Audit/Import when queued                </td>
+            </tr>
+                    </tbody>
+    </table>
+    </div>
+
+
+ObserveWeb Task
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is the form snippet from `task Tab in the ObserveWeb Wave
+<http://behattest.stagingsurvos.com/waves/dummy/ObserveWeb#task>`_.
+
+.. figure::  /images/modules/field_ObserveWeb_task.png
+
+   Rendered Form ObserveWeb Wave Tab task
+
+.. raw:: html
+
+    <div class="wy-table-responsive">
+    <table border="1" class="docutils">
+        <colgroup>
+        <col width="15%">
+        <col width="25%">
+        <col width="60%">
+        </colgroup>
+        <thead valign="bottom">
+            <tr class="row-odd">
+                <th class="head">Field</th>
+                <th class="head">Info</th>
+                <th class="head">Description</th>
+            </tr>
+        </thead>
+        <tbody valign="top">
+                                    <tr class="row-odd">
+                <th class="head">
+                    Task Title                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    Public title                </td>
+            </tr>
+                                    <tr class="row-even">
+                <th class="head">
+                    Description                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    Public description of this task                </td>
+            </tr>
+                                    <tr class="row-odd">
+                <th class="head">
+                    Deployment Keywords                </th>
+                <td>
+                                            <b>Type</b>: text                            <br>
+                        <b>Required</b>: No<br>
+                                                                                    </td>
+                <td>
+                    Keywords make searching for jobs easier                </td>
             </tr>
                     </tbody>
     </table>
@@ -607,98 +680,6 @@ This is the form snippet from `messages Tab in the ObserveWeb Wave
                                                                                     </td>
                 <td>
                     warning Custom Message                </td>
-            </tr>
-                    </tbody>
-    </table>
-    </div>
-
-
-ObserveWeb Routing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This is the form snippet from `routing Tab in the ObserveWeb Wave
-<http://behattest.stagingsurvos.com/waves/dummy/ObserveWeb#routing>`_.
-
-.. figure::  /images/modules/field_ObserveWeb_routing.png
-
-   Rendered Form ObserveWeb Wave Tab routing
-
-.. raw:: html
-
-    <div class="wy-table-responsive">
-    <table border="1" class="docutils">
-        <colgroup>
-        <col width="15%">
-        <col width="25%">
-        <col width="60%">
-        </colgroup>
-        <thead valign="bottom">
-            <tr class="row-odd">
-                <th class="head">Field</th>
-                <th class="head">Info</th>
-                <th class="head">Description</th>
-            </tr>
-        </thead>
-        <tbody valign="top">
-                                    <tr class="row-odd">
-                <th class="head">
-                    MobilityPreference                </th>
-                <td>
-                                            <b>Type</b>: string(12)                            <br>
-                        <b>Required</b>: Yes<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    Cents/mile                </th>
-                <td>
-                                            <b>Type</b>: integer                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-                    Minutes/Task                </th>
-                <td>
-                                            <b>Type</b>: integer                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    RouteDistance                </th>
-                <td>
-                                            <b>Type</b>: integer                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-odd">
-                <th class="head">
-                    RouteTime                </th>
-                <td>
-                                            <b>Type</b>: integer                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
-            </tr>
-                                    <tr class="row-even">
-                <th class="head">
-                    include_route_points                </th>
-                <td>
-                                            <b>Type</b>: boolean                            <br>
-                        <b>Required</b>: No<br>
-                                                                                    </td>
-                <td>
-                                    </td>
             </tr>
                     </tbody>
     </table>

@@ -39,13 +39,13 @@ Typical Questions
 Survey Types/Ways to Administer
 ----------------------------------
     
-    * WebInterview, see :ref:`WebInterview_integration_type`
-    * Mapmob, see :ref:`Mapmob_integration_type`
-    * Api, see :ref:`Api_integration_type`
     * ObserveWeb, see :ref:`ObserveWeb_integration_type`
-    * Simulator, see :ref:`Simulator_integration_type`
+    * WebInterview, see :ref:`WebInterview_integration_type`
     * TwilioSms, see :ref:`TwilioSms_integration_type`
     * Mattermost, see :ref:`Mattermost_integration_type`
+    * Email, see :ref:`Email_integration_type`
+    * Simulator, see :ref:`Simulator_integration_type`
+    * Api, see :ref:`Api_integration_type`
     * JsonResponses, see :ref:`JsonResponses_integration_type`
 
 
@@ -67,11 +67,11 @@ Code: ongoing
     :maxdepth: 2
 
 
-    integration-types/WebInterview
-    integration-types/Mapmob
-    integration-types/Api
     integration-types/ObserveWeb
-    integration-types/Simulator
+    integration-types/WebInterview
     integration-types/TwilioSms
     integration-types/Mattermost
+    integration-types/Email
+    integration-types/Simulator
+    integration-types/Api
     integration-types/JsonResponses

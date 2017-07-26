@@ -47,7 +47,7 @@ Let's do a quick look
 4. Publish the surveys
 
 Exporting Collected Data
-++++++++++++++++++++++
+++++++++++++++++++++++++
 
 Go to Export
 
